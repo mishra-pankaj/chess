@@ -70,7 +70,8 @@ io.on("connection",function(uniquesocket){
         uniquesocket.emit("Invalid move",move)
       }
     } catch (error) {
-      
+      console.log(error);
+      uniquesocket.emit("Invalid move",move)
     }
   } )
 
